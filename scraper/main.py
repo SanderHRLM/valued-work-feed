@@ -25,7 +25,7 @@ STATE_PATH = ROOT / "data" / "state.json"
 TODAY = date.today().isoformat()
 
 TRIAGE_ABOVE = 8          # meer nieuwe vacatures dan dit bij één bedrijf: eerst op titel voorselecteren
-MAX_NEW_PER_RUN = 10      # per bedrijf per run
+MAX_NEW_PER_RUN = 25      # per bedrijf per run
 MAX_ACTIVE_PER_COMPANY = 25
 CLOSE_AFTER_MISSING = 2   # zoveel geslaagde runs achter elkaar niet meer gezien: gesloten
 WORKERS = 8
@@ -199,6 +199,28 @@ def process_company(c, state, use_llm, log):
     cstate.update(status="ok", note=source, fails=0, last_ok=TODAY, listed=len(seen), new=added)
 
 
+def drop_duplicates(state, log):
+    """Zusterbedrijven zetten dezelfde vacature soms op elk hun eigen vacaturesite: houd er één."""
+    first = {}
+    for k in sorted(state["jobs"], key=lambda k: (state["jobs"][k]["first_seen"], state["jobs"][k]["company_key"])):
+        j = state["jobs"][k]
+        if j["status"] != "active":
+            continue
+        u = urlparse(j["url"])
+        path = u.path.rstrip("/")
+        sigs = [(j["title"].casefold().strip(), path)]
+        # Zelfde vacaturenummer bij hetzelfde vacaturesysteem (bijv. twee Personio-subdomeinen).
+        if re.search(r"/\d{6,}$", path):
+            sigs.append((".".join(u.netloc.lower().split(".")[-2:]), path))
+        hit = next((first[s] for s in sigs if s in first and first[s]["company_key"] != j["company_key"]), None)
+        if hit:
+            j.update(status="rejected", reason="dubbel met %s" % hit["company"], description_html="")
+            log.append("%s | %s: dubbel met %s, niet opgenomen" % (j["company"], j["title"], hit["company"]))
+        else:
+            for s in sigs:
+                first.setdefault(s, j)
+
+
 def _assess_and_store(state, k, c, cand, llm):
     desc = cand.get("description_html") or ""
     if not desc and cand.get("detail"):
@@ -265,6 +287,7 @@ def main():
     with ThreadPoolExecutor(WORKERS) as pool:
         list(pool.map(run, companies))
 
+    drop_duplicates(state, log)
     save_state(state)
     stats = output.write_all(state, [company_key(c) for c in companies], log, ROOT)
     print(stats["summary"])
