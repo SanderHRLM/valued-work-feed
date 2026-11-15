@@ -1,0 +1,62 @@
+name: Vacatures ophalen
+
+on:
+  schedule:
+    - cron: "0 5 * * *"   # elke dag 05:00 UTC
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Alleen de eerste N bedrijven (leeg = alle)"
+        required: false
+      only:
+        description: "Alleen bedrijven met deze tekst in de naam"
+        required: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: scrape
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: playwright install --with-deps chromium
+      - name: Scrapen en feed bouwen
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          VW_MODEL: ${{ vars.VW_MODEL || 'claude-opus-5-5' }}
+          VW_LIMIT: ${{ inputs.limit }}
+          VW_ONLY: ${{ inputs.only }}
+        run: python -m scraper.main ${VW_LIMIT:+--limit "$VW_LIMIT"} ${VW_ONLY:+--only "$VW_ONLY"}
+      - name: Status en feed vastleggen
+        run: |
+          git config user.name "valued-work-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data public
+          git diff --cached --quiet || git commit -m "Run $(date -u +%F)"
+          git push
+      - uses: actions/upload-pages-artifact@v3
+        if: vars.PUBLISH_PAGES == 'true'
+        with:
+          path: public
+
+  publish:
+    needs: scrape
+    if: vars.PUBLISH_PAGES == 'true'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+    steps:
+      - uses: actions/deploy-pages@v4
