@@ -281,6 +281,16 @@ def main():
         companies = companies[: args.limit]
 
     state, log = load_state(), []
+    # Gewijzigde selectieregels: alles opnieuw laten kiezen, zodat de feed de nieuwe regels volgt.
+    rules = hashlib.sha1(((ROOT / "criteria.md").read_text(encoding="utf-8") + str(MAX_ACTIVE_PER_COMPANY))
+                         .encode("utf-8")).hexdigest()
+    if state.get("rules") != rules:
+        for j in state["jobs"].values():
+            if j["status"] in ("active", "rejected"):
+                j.update(status="skipped", reason="opnieuw kiezen: selectieregels gewijzigd", description_html="")
+                j.pop("judged_by", None)
+        state["rules"] = rules
+        log.append("Selectieregels gewijzigd: alle vacatures worden opnieuw gekozen.")
 
     def run(c):
         try:
