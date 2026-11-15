@@ -133,8 +133,10 @@ def write_all(state, run_keys, log, root):
         from . import llm
 
         u = llm.usage
-        lines.append("- Claude (%s): %d aanroepen, %d invoer- en %d uitvoertokens, %d afgekapte pagina's, %d weigeringen"
-                     % (llm.MODEL, u["calls"], u["input"], u["output"], u["truncated_pages"], u["refusals"]))
+        lines.append("- Claude (%s): %d aanroepen, %d invoer- en %d uitvoertokens, circa $%.2f (plafond $%.2f), "
+                     "%d afgekapte pagina's, %d weigeringen"
+                     % (llm.MODEL, u["calls"], u["input"], u["output"], llm.spent_usd(), llm.MAX_USD,
+                        u["truncated_pages"], u["refusals"]))
     except Exception:  # noqa: BLE001 - zonder anthropic-pakket (bijv. --no-llm) is er geen verbruik
         pass
     if new_today:

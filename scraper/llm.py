@@ -9,7 +9,15 @@ from pathlib import Path
 
 import anthropic
 
-MODEL = os.environ.get("VW_MODEL", "claude-opus-5-5")
+MODEL = os.environ.get("VW_MODEL") or "claude-haiku-5-5"
+# Kostenplafond per run in dollars. Prijzen per miljoen tokens (invoer, uitvoer); onbekend model telt als Opus.
+MAX_USD = float(os.environ.get("VW_MAX_USD") or 5)
+PRICES = {"claude-haiku-5-5": (0.10, 0.50), "claude-sonnet-5-5": (2.0, 10.0), "claude-opus-5-5": (4.0, 20.0)}
+
+
+def spent_usd():
+    p_in, p_out = PRICES.get(MODEL, (4.0, 20.0))
+    return (usage["input"] * p_in + usage["output"] * p_out) / 1_000_000
 MAX_PAGE_CHARS = 200_000
 CATEGORIES = ["Gift card jobs", "Incentive jobs", "Loyalty jobs", "Employee recognition"]
 JOB_TYPES = ["Full-time", "Part-time", "Internship", "Contract", "Temporary"]
@@ -29,6 +37,8 @@ def criteria():
 
 def _call(system, user, schema, effort):
     global _client
+    if spent_usd() >= MAX_USD:
+        raise RuntimeError("kostenplafond van $%.2f voor deze run bereikt" % MAX_USD)
     if _client is None:
         _client = anthropic.Anthropic()
     # Streaming: de beschrijving van een vacature kan lang zijn; zo lopen we niet tegen time-outs aan.
