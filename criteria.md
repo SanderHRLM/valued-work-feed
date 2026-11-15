@@ -16,13 +16,13 @@ Function priority (at most two postings per employer are published, so order mat
    project management, implementation, fulfilment and supply management) and executive or leadership roles
    (C-level, managing director, country manager, VP, director, head of).
 2. Fallback, only when the employer has nothing from the first group: customer service, customer support and
-   customer success roles.
+   customer success roles, and finance, accounting, controlling, HR, recruitment, design and office
+   management roles.
 
 Do not include:
 - Software development, engineering, data science, data engineering, DevOps, QA, IT administration and other
   technical roles.
-- Other support functions: finance, accounting, controlling, legal, compliance, HR, recruitment, design,
-  office management.
+- Legal and compliance roles.
 - Internships, working-student and trainee positions.
 - Open or speculative applications, talent pools and general "join us" pages.
 - Warehouse, driver, cleaning, security and in-store retail roles.
