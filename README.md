@@ -35,5 +35,5 @@ niet bijgewerkt.
 ## Bekende beperkingen
 
 - Bedrijven met alleen een LinkedIn-vacaturepagina worden overgeslagen (niet uit te lezen zonder login).
-- Bij concerns met honderden vacatures worden per run maximaal 10 nieuwe vacatures per bedrijf beoordeeld,
-  voorgeselecteerd op titel.
+- Per bedrijf staan maximaal 2 vacatures in de feed (`MAX_ACTIVE_PER_COMPANY` in `scraper/main.py`). Claude
+  kiest op titel volgens de functieprioriteit in `criteria.md`; valt er een af, dan schuift de volgende door.
