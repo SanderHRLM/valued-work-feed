@@ -2,7 +2,7 @@ name: Vacatures ophalen
 
 on:
   schedule:
-    - cron: "0 5 * * *"   # elke dag 05:00 UTC
+    - cron: "0 5 * * 1"   # elke maandag 05:00 UTC
   workflow_dispatch:
     inputs:
       limit:
@@ -36,7 +36,8 @@ jobs:
       - name: Scrapen en feed bouwen
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          VW_MODEL: ${{ vars.VW_MODEL || 'claude-opus-5-5' }}
+          VW_MODEL: ${{ vars.VW_MODEL }}
+          VW_MAX_USD: ${{ vars.VW_MAX_USD }}
           VW_LIMIT: ${{ inputs.limit }}
           VW_ONLY: ${{ inputs.only }}
         run: python -m scraper.main ${VW_LIMIT:+--limit "$VW_LIMIT"} ${VW_ONLY:+--only "$VW_ONLY"}
