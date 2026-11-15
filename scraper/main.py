@@ -24,9 +24,8 @@ ROOT = Path(__file__).resolve().parent.parent
 STATE_PATH = ROOT / "data" / "state.json"
 TODAY = date.today().isoformat()
 
-TRIAGE_ABOVE = 8          # meer nieuwe vacatures dan dit bij één bedrijf: eerst op titel voorselecteren
-MAX_NEW_PER_RUN = 25      # per bedrijf per run
-MAX_ACTIVE_PER_COMPANY = 25
+MAX_ACTIVE_PER_COMPANY = 2   # zoveel vacatures per bedrijf in de feed
+SPARE_CANDIDATES = 3         # zoveel extra kandidaten beoordelen als de eerste keus afvalt
 CLOSE_AFTER_MISSING = 2   # zoveel geslaagde runs achter elkaar niet meer gezien: gesloten
 WORKERS = 8
 ALLOWED_TAGS = {"p", "h3", "h4", "ul", "ol", "li", "strong", "em", "b", "i", "br"}
@@ -166,8 +165,15 @@ def process_company(c, state, use_llm, log):
         j = state["jobs"].get(k)
         if j is None:
             return True
-        return j["status"] in ("rejected", "skipped") and key not in j.get("judged_by", [j["company_key"]])
+        # "skipped" = wel gezien maar nooit beoordeeld (geen plek): telt opnieuw mee zodra er plek is.
+        return j["status"] == "skipped" or (
+            j["status"] == "rejected" and key not in j.get("judged_by", [j["company_key"]]))
 
+    # Staan er meer in de feed dan het maximum (bijv. na het verlagen ervan), kies dan opnieuw.
+    if sum(1 for j in mine.values() if j["status"] == "active") > MAX_ACTIVE_PER_COMPANY:
+        for j in mine.values():
+            if j["status"] == "active":
+                j.update(status="skipped", reason="opnieuw kiezen: boven het maximum per bedrijf", description_html="")
     new = [(k, cand) for k, cand in seen.items() if is_new(k)]
     for k, j in mine.items():
         if k in seen:
@@ -180,17 +186,16 @@ def process_company(c, state, use_llm, log):
                 j["status"], j["closed_on"] = "closed", TODAY
     active = sum(1 for j in mine.values() if j["status"] == "active")
     added = 0
-    if new and use_llm:
+    slots = MAX_ACTIVE_PER_COMPANY - active
+    if new and use_llm and slots > 0:
         from . import llm
 
-        if len(new) > TRIAGE_ABOVE:
-            keep = set(llm.triage(c, [cand for _, cand in new], MAX_NEW_PER_RUN))
-            for i, (k, cand) in enumerate(new):
-                if i not in keep:
-                    _store(state, k, c, cand, "skipped", reason="niet geselecteerd op titel")
-            new = [new[i] for i in sorted(keep)]
-        for k, cand in new[:MAX_NEW_PER_RUN]:
-            if active + added >= MAX_ACTIVE_PER_COMPANY:
+        # Meer kandidaten dan plekken: Claude kiest op titel de beste, in volgorde van voorkeur.
+        if len(new) > slots:
+            order = list(dict.fromkeys(llm.triage(c, [cand for _, cand in new], slots + SPARE_CANDIDATES)))
+            new = [new[i] for i in order]
+        for k, cand in new[: slots + SPARE_CANDIDATES]:
+            if added >= slots:
                 break
             try:
                 added += _assess_and_store(state, k, c, cand, llm)
@@ -252,7 +257,7 @@ def _store(state, k, c, cand, status, **extra):
     with lock:
         old = state["jobs"].get(k)
         judged = (old.get("judged_by", [old["company_key"]]) if old else []) + [job["company_key"]]
-        if old and status != "active":
+        if old and status != "active" and old["status"] != "skipped":
             old["judged_by"] = judged
             return
         job["judged_by"] = judged

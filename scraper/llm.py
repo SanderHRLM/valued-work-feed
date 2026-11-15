@@ -125,7 +125,9 @@ def triage(company, candidates, limit):
         "You pre-select job postings for valued.work, a job board for the gift card, incentive, loyalty and "
         "rewards industry. " + GUARD + "\n\nSelection criteria:\n" + criteria() + "\n\n"
         "From the numbered list, return the numbers of at most %d postings most likely to meet the criteria, "
-        "best first. Respect the company's listed country/region. Return fewer, or none, if few qualify." % limit
+        "ordered by the function priority in the criteria (best first; among equals prefer the more senior "
+        "role). Leave out every posting in an excluded function. Respect the company's listed country/region. "
+        "Return fewer, or none, if few qualify." % limit
     )
     lines = "\n".join("%d. %s | %s" % (i, c["title"], c.get("location", "")) for i, c in enumerate(candidates))
     user = "Company: %s (%s)\nCategory: %s\nAbout: %s\n\n<page>\n%s\n</page>" % (
