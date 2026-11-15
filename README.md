@@ -1,6 +1,6 @@
 # valued.work vacaturescraper
 
-Haalt dagelijks de vacatures op bij de bedrijven in `companies.csv`, beoordeelt nieuwe vacatures met Claude
+Haalt wekelijks de vacatures op bij de bedrijven in `companies.csv`, beoordeelt nieuwe vacatures met Claude
 en schrijft een feed met alle open vacatures. Draait in GitHub Actions; er is geen handwerk nodig.
 
 ## Hoe het werkt
@@ -21,9 +21,9 @@ niet bijgewerkt.
 
 1. Maak een GitHub-repository en push deze map.
 2. Voeg onder Settings > Secrets and variables > Actions het secret `ANTHROPIC_API_KEY` toe.
-3. Optioneel, onder Variables: `VW_MODEL` (standaard `claude-opus-5-5`) en `PUBLISH_PAGES=true` om
+3. Optioneel, onder Variables: `VW_MODEL` (standaard `claude-haiku-5-5`), `VW_MAX_USD` (kostenplafond per run, standaard 5) en `PUBLISH_PAGES=true` om
    `public/` via GitHub Pages te publiceren (zet Pages dan op "GitHub Actions" als bron).
-4. Start de workflow "Vacatures ophalen" één keer handmatig; daarna draait hij elke dag om 05:00 UTC.
+4. Start de workflow "Vacatures ophalen" één keer handmatig; daarna draait hij elke maandag om 05:00 UTC.
 
 ## Aanpassen
 
