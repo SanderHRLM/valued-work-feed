@@ -87,43 +87,85 @@ def list_candidates(c, cstate, use_llm):
     if "linkedin.com" in url:
         raise Skip("alleen LinkedIn (niet uit te lezen zonder login)")
     try:
-        return _generic(c, cstate, url, use_llm, depth=0)
-    except Skip:
-        raise
-    except Exception:  # noqa: BLE001 - carrièrepagina verhuisd of stuk: zoek de link via de homepage
-        home = c["website"]
-        if not home or norm_url(home) == norm_url(url):
+        try:
+            return _generic(c, cstate, url, use_llm, depth=0)
+        except Skip:
             raise
-        return _generic(c, cstate, home, use_llm, depth=0)
+        except Exception:  # noqa: BLE001 - carrièrepagina verhuisd of stuk: zoek de link via de homepage
+            home = c["website"]
+            if not home or norm_url(home) == norm_url(url):
+                raise
+            return _generic(c, cstate, home, use_llm, depth=0)
+    except RuntimeError as e:
+        # Geen vacaturepagina opgegeven en op de website is er ook geen te vinden: dat is geen storing.
+        if not c["careers_url"] and "not_a_careers_page" in str(e):
+            raise Skip("geen vacaturepagina op de website")
+        raise
 
 
-def _generic(c, cstate, url, use_llm, depth):
-    text, how = fetch_page_text(url)
+MAX_HOPS = 3   # zo vaak doorklikken naar "bekijk alle vacatures" of een externe vacaturesite
+URL_RE = re.compile(r"\]\((https?://[^)\s]+)\)")
+
+
+def _read(c, cstate, url, use_llm, browser):
+    """Haalt één pagina op en laat Claude die uitlezen. Geeft (resultaat, tekst, manier)."""
+    cache = cstate.get("pages", {}).get(url)
+    text, how = fetch_page_text(url, browser=browser or bool(cache and cache.get("browser")))
     if len(text) < 80:
         raise RuntimeError("pagina leeg of geblokkeerd")
     digest = hashlib.sha1(text.encode("utf-8")).hexdigest()
-    cache = cstate.get("pages", {}).get(url)
     if cache and cache["hash"] == digest:
-        res = cache["result"]
-    elif not use_llm:
+        return cache["result"], text, how
+    if not use_llm:
         raise Skip("pagina gewijzigd; Claude nodig (--no-llm)")
-    else:
-        from . import llm
+    from . import llm
 
-        res = llm.extract_listing(c["company"], url, text)
-        if res is None:
-            raise RuntimeError("Claude weigerde de pagina")
-        cstate.setdefault("pages", {})[url] = {"hash": digest, "result": res}
+    res = llm.extract_listing(c["company"], url, text)
+    if res is None:
+        raise RuntimeError("Claude weigerde de pagina")
+    cstate.setdefault("pages", {})[url] = {"hash": digest, "result": res, "browser": how == "browser"}
+    return res, text, how
+
+
+def _usable(res):
+    return (res["page_kind"] == "listing" and res["jobs"]) or res["page_kind"] == "no_openings" or (
+        res["page_kind"] == "links_elsewhere" and res.get("follow_url"))
+
+
+def _generic(c, cstate, url, use_llm, depth, seen_urls=None):
+    seen_urls = seen_urls if seen_urls is not None else set()
+    seen_urls.add(norm_url(url))
+    res, text, how = _read(c, cstate, url, use_llm, browser=False)
+    # Veel vacaturelijsten worden pas door JavaScript opgebouwd: levert de kale pagina niets op,
+    # kijk dan nog eens met een echte browser.
+    if not _usable(res) and how == "http":
+        try:
+            res2, text2, how2 = _read(c, cstate, url, use_llm, browser=True)
+            if _usable(res2) or len(text2) > len(text):
+                res, text, how = res2, text2, how2
+        except Skip:
+            raise
+        except Exception:  # noqa: BLE001 - browser lukte niet: verder met wat we hadden
+            pass
     kind = res["page_kind"]
-    if kind == "links_elsewhere" and res.get("follow_url") and depth == 0 and res["follow_url"] in text:
-        follow = res["follow_url"]
-        found = ats.detect(follow)
-        if found:
-            cstate["ats_url"] = follow
-            return ats.fetch(*found), "ats:" + found[0]
-        if "linkedin.com" in follow:
-            raise Skip("verwijst naar LinkedIn")
-        return _generic(c, cstate, follow, use_llm, depth=1)
+    if kind != "listing" or not res["jobs"]:
+        # Een link naar een bekend vacaturesysteem op de pagina is de betrouwbaarste bron.
+        links = [res.get("follow_url") or ""] + URL_RE.findall(text)
+        for link in links:
+            found = ats.detect(link) if link in text else None
+            if found:
+                try:
+                    jobs = ats.fetch(*found)
+                except Exception:  # noqa: BLE001
+                    continue
+                cstate["ats_url"] = link
+                return jobs, "ats:" + found[0]
+        follow = res.get("follow_url") or ""
+        if kind == "links_elsewhere" and follow in text and follow:
+            if "linkedin.com" in follow:
+                raise Skip("verwijst naar LinkedIn")
+            if depth < MAX_HOPS and norm_url(follow) not in seen_urls:
+                return _generic(c, cstate, follow, use_llm, depth + 1, seen_urls)
     if kind in ("blocked_or_empty", "not_a_careers_page", "links_elsewhere"):
         raise RuntimeError("geen vacaturelijst gevonden (%s)" % kind)
     cands = []

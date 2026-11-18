@@ -5,6 +5,7 @@ kandidaten: dicts met title, url, location, en description_html of detail.
 """
 import html
 import re
+import threading
 import xml.etree.ElementTree as ET
 from urllib.parse import parse_qs, urlparse
 
@@ -62,8 +63,18 @@ def fallback_page(kind, key):
     return None
 
 
+_cache, _locks, _guard = {}, {}, threading.Lock()
+
+
 def fetch(kind, key):
-    return globals()["_" + kind](key)[:MAX_JOBS_PER_BOARD]
+    """Haalt een vacaturesite op. Meerdere bedrijven delen soms één site (bijv. alle Pluxee-landen):
+    die wordt per run één keer opgehaald, zodat de site ons niet afknijpt."""
+    with _guard:
+        lock = _locks.setdefault((kind, key), threading.Lock())
+    with lock:
+        if (kind, key) not in _cache:
+            _cache[(kind, key)] = globals()["_" + kind](key)[:MAX_JOBS_PER_BOARD]
+        return [dict(j) for j in _cache[(kind, key)]]
 
 
 def _greenhouse(token):

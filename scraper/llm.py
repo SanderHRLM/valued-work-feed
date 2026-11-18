@@ -105,7 +105,10 @@ def extract_listing(company, page_url, page_text):
         "are none; 'links_elsewhere' if the vacancies live on another page or external job board that the page "
         "links to (then put that link in follow_url); 'not_a_careers_page' if this is not about jobs at all; "
         "'blocked_or_empty' for login walls, bot checks, or pages without usable content.\n"
-        "follow_url is an empty string unless page_kind is 'links_elsewhere'."
+        "If the page is not a careers page itself but links to the company's own careers, jobs or vacancies "
+        "page, that also counts as 'links_elsewhere'. Always choose the link that leads most directly to the "
+        "list of open positions ('view all jobs', 'open positions', an embedded frame), not to a page about "
+        "culture or benefits. follow_url is an empty string unless page_kind is 'links_elsewhere'."
     )
     user = "Company: %s\nPage URL: %s\n\n<page>\n%s\n</page>" % (company, page_url, _clip(page_text))
     return _call(system, user, LISTING_SCHEMA, "low")
