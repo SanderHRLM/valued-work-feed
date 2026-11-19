@@ -10,6 +10,7 @@ import re
 import sys
 import threading
 import traceback
+import time
 from concurrent.futures import ThreadPoolExecutor
 from datetime import date
 from pathlib import Path
@@ -28,6 +29,7 @@ MAX_ACTIVE_PER_COMPANY = 2   # zoveel vacatures per bedrijf in de feed
 SPARE_CANDIDATES = 3         # zoveel extra kandidaten beoordelen als de eerste keus afvalt
 CLOSE_AFTER_MISSING = 2   # zoveel geslaagde runs achter elkaar niet meer gezien: gesloten
 WORKERS = 8
+MAX_MINUTES = 100         # daarna geen nieuwe bedrijven meer starten; de rest volgt bij de volgende run
 ALLOWED_TAGS = {"p", "h3", "h4", "ul", "ol", "li", "strong", "em", "b", "i", "br"}
 
 lock = threading.Lock()
@@ -138,7 +140,9 @@ def _generic(c, cstate, url, use_llm, depth, seen_urls=None):
     res, text, how = _read(c, cstate, url, use_llm, browser=False)
     # Veel vacaturelijsten worden pas door JavaScript opgebouwd: levert de kale pagina niets op,
     # kijk dan nog eens met een echte browser.
-    if not _usable(res) and how == "http":
+    # Een homepage zonder link naar vacatures hoeft niet opnieuw in een browser: dat levert zelden iets op.
+    worth_a_browser = res["page_kind"] != "not_a_careers_page" or norm_url(url) != norm_url(c["website"] or "")
+    if not _usable(res) and how == "http" and worth_a_browser:
         try:
             res2, text2, how2 = _read(c, cstate, url, use_llm, browser=True)
             if _usable(res2) or len(text2) > len(text):
@@ -334,15 +338,29 @@ def main():
         state["rules"] = rules
         log.append("Selectieregels gewijzigd: alle vacatures worden opnieuw gekozen.")
 
+    started, late = time.time(), []
+    # Bedrijven die de vorige keer niet aan de beurt kwamen of het langst geleden slaagden, gaan voor.
+    companies.sort(key=lambda c: state["companies"].get(company_key(c), {}).get("last_try", ""))
+
     def run(c):
+        if time.time() - started > MAX_MINUTES * 60:
+            late.append(c["company"])
+            return
+        t0 = time.time()
+        cstate = state["companies"].setdefault(company_key(c), {})
         try:
             process_company(c, state, not args.no_llm, log)
         except Exception:  # noqa: BLE001
             log.append("%s: %s" % (c["company"], traceback.format_exc(limit=2)))
-            state["companies"].setdefault(company_key(c), {}).update(status="fout", note="onverwachte fout")
+            cstate.update(status="fout", note="onverwachte fout")
+        cstate["last_try"] = "%s %06d" % (TODAY, int(time.time() - started))
+        print("%4ds  %-13s %s (%.0fs)" % (time.time() - started, cstate.get("status", "?"), c["company"],
+                                          time.time() - t0), flush=True)
 
     with ThreadPoolExecutor(WORKERS) as pool:
         list(pool.map(run, companies))
+    if late:
+        log.append("Tijd op: %d bedrijven niet bekeken, die gaan de volgende run voor." % len(late))
 
     drop_duplicates(state, log)
     save_state(state)

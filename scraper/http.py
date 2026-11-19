@@ -1,5 +1,6 @@
 """HTTP-hulpfuncties: ophalen van pagina's en omzetten naar compacte tekst met links."""
 import re
+import threading
 import time
 from urllib.parse import urljoin
 
@@ -9,7 +10,8 @@ from bs4 import BeautifulSoup
 # Een gewone browser-kenmerk: veel sites weigeren alles wat zich als script aandient.
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
       "Chrome/131.0.0.0 Safari/537.36")
-TIMEOUT = 30
+TIMEOUT = (10, 25)   # verbinden, lezen
+_browsers = threading.Semaphore(3)   # een browser is zwaar: hooguit drie tegelijk
 _session = requests.Session()
 _session.headers.update({"User-Agent": UA, "Accept-Language": "en,nl;q=0.8,de;q=0.7",
                          "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"})
@@ -17,17 +19,17 @@ _session.headers.update({"User-Agent": UA, "Accept-Language": "en,nl;q=0.8,de;q=
 
 def _request(method, url, **kw):
     """Eén verzoek, met een paar herkansingen als de site vraagt om rustiger aan te doen of even hapert."""
-    for attempt in range(4):
+    for attempt in range(3):
         try:
             r = _session.request(method, url, timeout=TIMEOUT, **kw)
         except (requests.ConnectionError, requests.Timeout):
-            if attempt == 3:
+            if attempt >= 1:   # onbereikbare sites kosten anders minuten per stuk
                 raise
-            time.sleep(3 * (attempt + 1))
+            time.sleep(3)
             continue
-        if r.status_code in (429, 502, 503, 504) and attempt < 3:
+        if r.status_code in (429, 502, 503, 504) and attempt < 2:
             wait = r.headers.get("Retry-After", "")
-            time.sleep(min(int(wait), 30) if wait.isdigit() else 5 * (attempt + 1))
+            time.sleep(min(int(wait), 20) if wait.isdigit() else 5 * (attempt + 1))
             continue
         r.raise_for_status()
         return r
@@ -77,16 +79,17 @@ def _render(url):
         from playwright.sync_api import sync_playwright
     except ImportError:
         return None
-    with sync_playwright() as p:
-        browser = p.chromium.launch()
+    with _browsers, sync_playwright() as p:
+        browser = p.chromium.launch(timeout=30000)
         try:
             page = browser.new_page(user_agent=UA, locale="en-US")
-            page.goto(url, wait_until="domcontentloaded", timeout=45000)
+            page.set_default_timeout(10000)
+            page.goto(url, wait_until="domcontentloaded", timeout=25000)
             try:  # sommige sites worden nooit "stil"; dan volstaat wat er na een tijdje staat
-                page.wait_for_load_state("networkidle", timeout=15000)
+                page.wait_for_load_state("networkidle", timeout=8000)
             except Exception:  # noqa: BLE001
                 pass
-            page.wait_for_timeout(2000)
+            page.wait_for_timeout(1500)
             frames = [page.content()]
             for fr in page.frames[1:]:
                 try:
