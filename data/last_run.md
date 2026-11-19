@@ -1,32 +1,281 @@
-# Run 2026-11-19T03:03:51Z
+# Run 2026-11-19T03:26:48Z
 
-- Actieve vacatures in feed: **164**
-- Nieuw vandaag: **4**, gesloten vandaag: **1**
-- Bedrijven: 47 ok, 5 fout, 8 overgeslagen
-- Claude (claude-haiku-5-5): 41 aanroepen, 143465 invoer- en 25545 uitvoertokens, circa $0.03 (plafond $5.00), 0 afgekapte pagina's, 0 weigeringen
+- Actieve vacatures in feed: **184**
+- Nieuw vandaag: **30**, gesloten vandaag: **7**
+- Bedrijven: 287 ok, 80 fout, 147 overgeslagen
+- Claude (claude-haiku-5-5): 521 aanroepen, 2594549 invoer- en 274519 uitvoertokens, circa $0.40 (plafond $5.00), 0 afgekapte pagina's, 0 weigeringen
 
 ## Nieuw
+- giftee Inc. — [事業責任者候補（giftee for Business）](https://herp.careers/v1/gifteegroup/rSVqu-zJF73H)
+- giftee Inc. — [ブリッジプロジェクトマネージャー](https://herp.careers/v1/gifteegroup/6LxKTChVuWrK)
+- Xoxoday (Nreach Online Services) — [Head - Marketing](https://nreach.keka.com/careers/jobdetails/145850?source=xoxoday-website)
+- Xoxoday (Nreach Online Services) — [Key Account Manager – Enterprise Sales](https://nreach.keka.com/careers/jobdetails/144344?source=xoxoday-website)
 - Wonderbox NL — [Field Merchandiser Giftcards & Experiences](https://wonderbox.wd3.myworkdayjobs.com/en-US/WONDERBOX_GROUP_CAREERS/job/Haarlem/Field-Merchandiser-Giftcards---Experiences_JR000662)
+- Sprout Solutions — [Brand Marketing Officer](https://www.careers-page.com/sprout-solutions-phil-inc/job/Y6VWR59)
+- Restaurant.com — [B2B Sales](https://www.careers-page.com/restaurantcom/job/LR836R86)
+- Restaurant.com — [Account Manger](https://www.careers-page.com/restaurantcom/job/QV53VRV8)
+- Puntos Colombia — [Gestor Aliados - 1277](https://www.magneto365.com/co/empleos/gestor-aliados-1277-1140674)
+- Pluxee Brasil — [Consultor de Vendas | Hunter](https://pluxee-br.gupy.io/jobs/12642167?jobBoardSource=gupy_public_page)
+- Pluxee Belgium — [Inside Sales Hunter](https://pluxee.wd3.myworkdayjobs.com/en-US/Pluxee_Career_Site/job/Bruxelles/Inside-Sales-Hunter_R6154)
+- Perx Technologies — [Sales Director](https://www.perxtech.com/jobs/sales-director/)
+- PAYBACK — [Key Account Manager Travel & Mobility (m/w/d)](https://jobs.payback.group/de_DE/careers/JobDetail/Key-Account-Manager-Travel-Mobility-Munich/1273)
+- Loyalty Marketing (Ponta) — [アカウントプランナー（リーダー候補）](https://tidv5537.talent-p.net/JobOfferPageForm/Index?url_token=b373a5b71ff64fa094872d3db831c869)
+- Loyalty Marketing (Ponta) — [アカウントプランナー](https://tidv5537.talent-p.net/JobOfferPageForm/Index?url_token=8553bc732d7a490d90317e6124ce6edd)
+- Livelo — [Analista Pricing SR](https://livelo.inhire.app/vagas/204656d8-2f76-4432-9c74-d03af16b1a8b/analista-pricing-sr)
+- Livelo — [Pessoa Analista de Agilidade SR](https://livelo.inhire.app/vagas/8245e0bc-0c70-4b3c-addc-4e8ebd62cf46/pessoa-analista-de-agilidade-sr-or-afirmativa-para-pessoas-pretas-e-pardas)
+- Kennect — [Sales Development Representative (SDR) – SaaS](https://www.kennect.io/job-posting/sales-development-representative-saas)
+- Flash — [Coordenador(a) Comercial](https://jobs.lever.co/flashapp/95ad4266-3104-4198-b41d-25a6ad7607d3)
+- Flash — [Analista de Pré vendas de Contas Estratégias Sênior](https://jobs.lever.co/flashapp/32741c15-1655-450e-a7f8-c672f00c6d28)
+- Edenred Taiwan — [Sals Manager, Web Growth](https://wd3.myworkdaysite.com/recruiting/edenpeople/Edenred_Careers/job/Taiwan---Taipei/Sals-Manager--Web-Growth_JR021554)
+- Edenred Taiwan — [Advertising & Partnership Manager](https://wd3.myworkdaysite.com/recruiting/edenpeople/Edenred_Careers/job/Taiwan---Taipei/Advertising---Partnership-Manager_JR021754)
+- Dotz — [Analista de Negócios Sênior - Operações PDV](https://dotz.gupy.io/jobs/12908057?jobBoardSource=gupy_public_page)
 - Belonio (Epassi Group) — [Sales Manager (f/m/d) - Telefonische Akquise Firmenfitness & Corporate Benefits (B2B)](https://emp.jobylon.com/jobs/299344-hansefit-gmbh-epassi-group-sales-manager-fmd-telefonische-akquise-firmenfitness-corporate-benefits-b2b/)
 - Belonio (Epassi Group) — [Marketing Manager (m/f/d)](https://emp.jobylon.com/jobs/396458-epassi-deutschland-gmbh-ehem-hansefit-marketing-manager-mfd/)
+- Augeo Affinity Marketing — [Events Business Development Strategy Director](https://recruiting.paylocity.com/Recruiting/Jobs/Details/4468619)
+- Augeo Affinity Marketing — [Senior Event Manager, Incentive Travel](https://recruiting.paylocity.com/Recruiting/Jobs/Details/4577955)
+- Almonds Ai — [Catalogue Creator/ Manager](https://almonds.ai/career/)
+- Alloyal — [Analista de Customer Success Sênior](https://alloyal.inhire.app/vagas/17c49baf-81e1-433a-b32f-8c81dd7e4847/analista-de-customer-success-senior)
 - Alleo by Epassi — [B2B Marketing Manager - Sports Activation](https://emp.jobylon.com/jobs/380025-bedrijfsfitness-nederland-epassi-group-b2b-marketing-manager-sports-activation/)
 
 ## Gesloten
+- LoyaltyXpert — Business Development Manager (Domestic Sales)
+- Bedrijfsfitness Nederland (Epassi) — B2B Marketing Activation Manager
+- Bedrijfsfitness Nederland (Epassi) — Account Executive New Business
+- PAYBACK — Key Account Manager eCommerce (m/w/d)
+- Pluxee Deutschland — HR Business Partner Germany & Austria mit Fokus auf Payroll
 - Probonio — Key Account Manager (gn) Süd
+- Kennect — Sales Executive – SaaS Product Sales
 
-## Fouten (5)
-- BENELUX-DE|Blackhawk Network Germany: ConnectTimeout: HTTPSConnectionPool(host='www.blackhawknetwork.de', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.blackhawknetwork.de', port=443) at 0x7c4c6e03c
+## Fouten (80)
+- BENELUX-DE|Blackhawk Network Germany: ConnectTimeout: HTTPSConnectionPool(host='www.blackhawknetwork.de', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.blackhawknetwork.de', port=443) at 0x76ec5a19b
 - BENELUX-DE|Blackhawk Network Netherlands: RuntimeError: geen vacaturelijst gevonden (blocked_or_empty)
 - BENELUX-DE|Loyalty Prime: ConnectionError: HTTPSConnectionPool(host='www.loyaltyprime.com', port=443): Max retries exceeded with url: / (Caused by NewConnectionError("HTTPSConnection(host='www.loyaltyprime.com', port=443): Failed to establish 
+- BENELUX-DE|Motisha: RuntimeError: geen vacaturelijst gevonden (not_a_careers_page)
+- BENELUX-DE|Officient: RuntimeError: geen vacaturelijst gevonden (not_a_careers_page)
 - BENELUX-DE|Talon.One: RuntimeError: geen vacaturelijst gevonden (links_elsewhere)
 - BENELUX-DE|VVV Cadeaukaarten: RuntimeError: geen vacaturelijst gevonden (blocked_or_empty)
+- BENELUX-DE|Wonderbox Belgium: HTTPError: 429 Client Error: Too Many Requests for url: https://wonderbox.wd3.myworkdayjobs.com/wday/cxs/wonderbox/WONDERBOX_GROUP_CAREERS/jobs
+- LATAM|Cliento: RuntimeError: pagina leeg of geblokkeerd
+- LATAM|Digital Rewards: RuntimeError: pagina leeg of geblokkeerd
+- LATAM|Lealto: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+- LATAM|OMC Payments (Oh My Card): RuntimeError: pagina leeg of geblokkeerd
+- LATAM|Pluxee Perú: HTTPError: 429 Client Error: Too Many Requests for url: https://pluxee.wd3.myworkdayjobs.com/wday/cxs/pluxee/Pluxee_Career_Site/jobs
+- LATAM|Pluxee Uruguay: HTTPError: 429 Client Error: Too Many Requests for url: https://pluxee.wd3.myworkdayjobs.com/wday/cxs/pluxee/Pluxee_Career_Site/jobs
+- LATAM|Promotick: RuntimeError: geen vacaturelijst gevonden (not_a_careers_page)
+- LATAM|Runa HR: RuntimeError: geen vacaturelijst gevonden (blocked_or_empty)
+- LATAM|Up Sí Vale: RuntimeError: geen vacaturelijst gevonden (links_elsewhere)
+- LATAM|Wellhub (ex-Gympass): RuntimeError: geen vacaturelijst gevonden (blocked_or_empty)
+- LATAM|amiPASS: RuntimeError: geen vacaturelijst gevonden (not_a_careers_page)
+- LATAM|tubono (Bien Trabajo): RuntimeError: geen vacaturelijst gevonden (links_elsewhere)
+- MEAPAC|10bis (Ten Bis): RuntimeError: geen vacaturelijst gevonden (blocked_or_empty)
+- MEAPAC|91APP: RuntimeError: geen vacaturelijst gevonden (blocked_or_empty)
+- MEAPAC|Advantage Club: RuntimeError: geen vacaturelijst gevonden (blocked_or_empty)
+- MEAPAC|Ascenda: RuntimeError: geen vacaturelijst gevonden (blocked_or_empty)
+- MEAPAC|Biggloyalty: RuntimeError: geen vacaturelijst gevonden (not_a_careers_page)
+- MEAPAC|Blackhawk Network Australia: ConnectTimeout: HTTPSConnectionPool(host='blackhawknetwork.com.au', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='blackhawknetwork.com.au', port=443) at 0x76ec59f0d
+- MEAPAC|Blackhawk Network Hong Kong: RuntimeError: geen vacaturelijst gevonden (blocked_or_empty)
+- MEAPAC|Capillary Arabia: RuntimeError: pagina leeg of geblokkeerd
+- MEAPAC|Capillary Technologies: RuntimeError: pagina leeg of geblokkeerd
+- MEAPAC|Capillary Technologies (SG): RuntimeError: pagina leeg of geblokkeerd
+- MEAPAC|Everstage: RuntimeError: geen vacaturelijst gevonden (not_a_careers_page)
+- MEAPAC|Fave: RuntimeError: geen vacaturelijst gevonden (not_a_careers_page)
+- MEAPAC|GiftOne (Apex One Global): RuntimeError: geen vacaturelijst gevonden (blocked_or_empty)
+- MEAPAC|Giftano: RuntimeError: geen vacaturelijst gevonden (blocked_or_empty)
+- MEAPAC|Giftaway Inc.: RuntimeError: geen vacaturelijst gevonden (blocked_or_empty)
+- MEAPAC|HAPPY GO (DDIM): RuntimeError: geen vacaturelijst gevonden (not_a_careers_page)
+- MEAPAC|Interlink: RuntimeError: geen vacaturelijst gevonden (not_a_careers_page)
+- MEAPAC|Korea Culture Promotion (Cultureland): RuntimeError: geen vacaturelijst gevonden (blocked_or_empty)
+- MEAPAC|Majid Al Futtaim (SHARE): RuntimeError: geen vacaturelijst gevonden (not_a_careers_page)
+- MEAPAC|MetropolCard: RuntimeError: geen vacaturelijst gevonden (not_a_careers_page)
+- MEAPAC|Multinet Up: RuntimeError: geen vacaturelijst gevonden (blocked_or_empty)
+- MEAPAC|Ocard: RuntimeError: geen vacaturelijst gevonden (blocked_or_empty)
+- MEAPAC|Onsurity: RuntimeError: geen vacaturelijst gevonden (not_a_careers_page)
+- MEAPAC|Ooredoo Nojoom: RuntimeError: geen vacaturelijst gevonden (not_a_careers_page)
+- MEAPAC|Pluxee India: HTTPError: 429 Client Error: Too Many Requests for url: https://pluxee.wd3.myworkdayjobs.com/wday/cxs/pluxee/Pluxee_Career_Site/jobs
+- MEAPAC|Pluxee Türkiye: RuntimeError: geen vacaturelijst gevonden (not_a_careers_page)
+- MEAPAC|Razer Gold: HTTPError: 429 Client Error: Too Many Requests for url: https://razer.wd3.myworkdayjobs.com/wday/cxs/razer/Careers/jobs
+- MEAPAC|Tada (Singapore): RuntimeError: geen vacaturelijst gevonden (not_a_careers_page)
+- MEAPAC|Vivid Promotions Australia: ConnectionError: HTTPSConnectionPool(host='www.vividpromotions.com.au', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host='www.vividpromotions.com.au', port=443): Failed 
+- MEAPAC|Weimob 微盟: RuntimeError: geen vacaturelijst gevonden (links_elsewhere)
+- MEAPAC|YOUGotaGift: RuntimeError: pagina leeg of geblokkeerd
+- MEAPAC|epay New Zealand (Prezzy Card): SSLError: HTTPSConnectionPool(host='epaynz.co.nz', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostna
+- USA|AAA: RuntimeError: geen vacaturelijst gevonden (not_a_careers_page)
+- USA|AMC Theatres: RuntimeError: geen vacaturelijst gevonden (blocked_or_empty)
+- USA|Advantage Club Technologies Inc: RuntimeError: geen vacaturelijst gevonden (blocked_or_empty)
+- USA|American Airlines: RuntimeError: geen vacaturelijst gevonden (blocked_or_empty)
+- USA|Best Buy: ReadTimeout: HTTPSConnectionPool(host='www.bestbuy.com', port=443): Read timed out. (read timeout=25)
+- USA|Blackhawk Network (BHN / BHN|Tango): RuntimeError: geen vacaturelijst gevonden (blocked_or_empty)
+- USA|C.A. Short Company: RuntimeError: geen vacaturelijst gevonden (not_a_careers_page)
+- USA|Dash Solutions: RuntimeError: geen vacaturelijst gevonden (not_a_careers_page)
+- USA|Domino's Pizza: RuntimeError: geen vacaturelijst gevonden (blocked_or_empty)
+- USA|Extu: RuntimeError: geen vacaturelijst gevonden (blocked_or_empty)
+- USA|Ferguson: HTTPError: 403 Client Error: Forbidden for url: https://www.ferguson.com/
+- USA|GThankYou: RuntimeError: pagina leeg of geblokkeerd
+- USA|Honeyfund: RuntimeError: geen vacaturelijst gevonden (blocked_or_empty)
+- USA|Incentive Concepts: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+- USA|Interval International: RuntimeError: geen vacaturelijst gevonden (not_a_careers_page)
+- USA|Jabil: RuntimeError: geen vacaturelijst gevonden (not_a_careers_page)
+- USA|LMCU (Lake Michigan Credit Union): RuntimeError: geen vacaturelijst gevonden (blocked_or_empty)
+- USA|MIT: RuntimeError: geen vacaturelijst gevonden (blocked_or_empty)
+- USA|PLI (PLI Cards): RuntimeError: geen vacaturelijst gevonden (not_a_careers_page)
+- USA|Panera Bread: RuntimeError: pagina leeg of geblokkeerd
+- USA|Picnic Time Family of Brands: RuntimeError: geen vacaturelijst gevonden (blocked_or_empty)
+- USA|PromoShop, Inc.: RuntimeError: pagina leeg of geblokkeerd
+- USA|Regal (Regal Cinemas): RuntimeError: geen vacaturelijst gevonden (blocked_or_empty)
+- USA|S&P Global: RuntimeError: geen vacaturelijst gevonden (blocked_or_empty)
+- USA|Shift4: RuntimeError: geen vacaturelijst gevonden (blocked_or_empty)
+- USA|The Wolfe Companies (GiftYa): RuntimeError: geen vacaturelijst gevonden (blocked_or_empty)
+- USA|Totus: RuntimeError: geen vacaturelijst gevonden (not_a_careers_page)
+- USA|U.S. Bank: RuntimeError: geen vacaturelijst gevonden (blocked_or_empty)
 
-## Overgeslagen (8)
+## Overgeslagen (147)
 - BENELUX-DE|Air Miles / Loyalty Management Netherlands: alleen LinkedIn (niet uit te lezen zonder login)
+- BENELUX-DE|Boncado (JALM SRL): geen vacaturepagina op de website
 - BENELUX-DE|De Nationale Bioscoopbon: geen vacaturepagina op de website
+- BENELUX-DE|Faxions: alleen LinkedIn (niet uit te lezen zonder login)
+- BENELUX-DE|Freedelity: alleen LinkedIn (niet uit te lezen zonder login)
 - BENELUX-DE|FutureBens: alleen LinkedIn (niet uit te lezen zonder login)
 - BENELUX-DE|GivaCard: geen vacaturepagina op de website
 - BENELUX-DE|Loyaltygroup: geen vacaturepagina op de website
 - BENELUX-DE|Nederlandse Boekenbon: alleen LinkedIn (niet uit te lezen zonder login)
 - BENELUX-DE|SPTC / Podium Cadeaukaart: geen vacaturepagina op de website
+- BENELUX-DE|Skipr: alleen LinkedIn (niet uit te lezen zonder login)
+- BENELUX-DE|Tomboka: geen vacaturepagina op de website
+- BENELUX-DE|Vivabox (Vivaboxes International): alleen LinkedIn (niet uit te lezen zonder login)
 - BENELUX-DE|YourGift Cards: geen vacaturepagina op de website
+- LATAM|Ahorra Fácil: alleen LinkedIn (niet uit te lezen zonder login)
+- LATAM|Apprecio: alleen LinkedIn (niet uit te lezen zonder login)
+- LATAM|Beneplus: geen vacaturepagina op de website
+- LATAM|Bigbox: verwijst naar LinkedIn
+- LATAM|Blackhawk Network Brasil: alleen LinkedIn (niet uit te lezen zonder login)
+- LATAM|Bonnus: alleen LinkedIn (niet uit te lezen zonder login)
+- LATAM|Bonus Venezuela (Tebca): geen vacaturepagina op de website
+- LATAM|Cashin: alleen LinkedIn (niet uit te lezen zonder login)
+- LATAM|Centiva: alleen LinkedIn (niet uit te lezen zonder login)
+- LATAM|ConnectMiles (Copa Airlines): alleen LinkedIn (niet uit te lezen zonder login)
+- LATAM|Cotax: geen vacaturepagina op de website
+- LATAM|Fidelia: geen vacaturepagina op de website
+- LATAM|Fidelimax: alleen LinkedIn (niet uit te lezen zonder login)
+- LATAM|Fidelogist: geen vacaturepagina op de website
+- LATAM|GOintegro (Edenred): alleen LinkedIn (niet uit te lezen zonder login)
+- LATAM|Gift Card Plus: alleen LinkedIn (niet uit te lezen zonder login)
+- LATAM|Giftealo: alleen LinkedIn (niet uit te lezen zonder login)
+- LATAM|Giftty: alleen LinkedIn (niet uit te lezen zonder login)
+- LATAM|Gifycard: alleen LinkedIn (niet uit te lezen zonder login)
+- LATAM|Grupo Alus: alleen LinkedIn (niet uit te lezen zonder login)
+- LATAM|Ignait Loyalty Marketing: alleen LinkedIn (niet uit te lezen zonder login)
+- LATAM|Incent: alleen LinkedIn (niet uit te lezen zonder login)
+- LATAM|Incentivale: alleen LinkedIn (niet uit te lezen zonder login)
+- LATAM|Juju: alleen LinkedIn (niet uit te lezen zonder login)
+- LATAM|Lealio: geen vacaturepagina op de website
+- LATAM|LifeMiles: alleen LinkedIn (niet uit te lezen zonder login)
+- LATAM|Loyalics: geen vacaturepagina op de website
+- LATAM|Loyalty Solutions México: alleen LinkedIn (niet uit te lezen zonder login)
+- LATAM|Loyalz Club: alleen LinkedIn (niet uit te lezen zonder login)
+- LATAM|Pluxee Colombia: verwijst naar LinkedIn
+- LATAM|Prex: alleen LinkedIn (niet uit te lezen zonder login)
+- LATAM|RESULTS Driven Loyalty: alleen LinkedIn (niet uit te lezen zonder login)
+- LATAM|Smash (SmashPoints Tecnologia): alleen LinkedIn (niet uit te lezen zonder login)
+- LATAM|StarGroup: alleen LinkedIn (niet uit te lezen zonder login)
+- LATAM|Super Incentivos: alleen LinkedIn (niet uit te lezen zonder login)
+- LATAM|Worky: alleen LinkedIn (niet uit te lezen zonder login)
+- LATAM|YETZ: alleen LinkedIn (niet uit te lezen zonder login)
+- LATAM|Zum Giftcards: geen vacaturepagina op de website
+- LATAM|be! Gift Card: geen vacaturepagina op de website
+- LATAM|minomina: alleen LinkedIn (niet uit te lezen zonder login)
+- MEAPAC|212F: alleen LinkedIn (niet uit te lezen zonder login)
+- MEAPAC|Benepik: alleen LinkedIn (niet uit te lezen zonder login)
+- MEAPAC|Bonat: alleen LinkedIn (niet uit te lezen zonder login)
+- MEAPAC|BoxUp Luxury Gifting: alleen LinkedIn (niet uit te lezen zonder login)
+- MEAPAC|CanLead 肯驛國際: geen vacaturepagina op de website
+- MEAPAC|Cherrypicks: geen vacaturepagina op de website
+- MEAPAC|Chippin: alleen LinkedIn (niet uit te lezen zonder login)
+- MEAPAC|Cibus Pluxee: alleen LinkedIn (niet uit te lezen zonder login)
+- MEAPAC|Como: alleen LinkedIn (niet uit te lezen zonder login)
+- MEAPAC|Consortium Gifts: alleen LinkedIn (niet uit te lezen zonder login)
+- MEAPAC|Cubic Promote: geen vacaturepagina op de website
+- MEAPAC|Duiba 兑吧: geen vacaturepagina op de website
+- MEAPAC|Eber: alleen LinkedIn (niet uit te lezen zonder login)
+- MEAPAC|Ensaan Technologies: verwijst naar LinkedIn
+- MEAPAC|Forest Interactive: alleen LinkedIn (niet uit te lezen zonder login)
+- MEAPAC|Gift Empire: geen vacaturepagina op de website
+- MEAPAC|GiftPay: geen vacaturepagina op de website
+- MEAPAC|Giftcard.ae: geen vacaturepagina op de website
+- MEAPAC|Gifted.PH: geen vacaturepagina op de website
+- MEAPAC|Go Rewards (Robinsons Retail): geen vacaturepagina op de website
+- MEAPAC|GyFTR (Vouchagram India): alleen LinkedIn (niet uit te lezen zonder login)
+- MEAPAC|HiFives: alleen LinkedIn (niet uit te lezen zonder login)
+- MEAPAC|Incentive Solutions NZ: alleen LinkedIn (niet uit te lezen zonder login)
+- MEAPAC|LOY: geen vacaturepagina op de website
+- MEAPAC|Loyalty Juggernaut (GRAVTY): alleen LinkedIn (niet uit te lezen zonder login)
+- MEAPAC|Loyetta: geen vacaturepagina op de website
+- MEAPAC|Loylogic: alleen LinkedIn (niet uit te lezen zonder login)
+- MEAPAC|Loylty Rewardz: alleen LinkedIn (niet uit te lezen zonder login)
+- MEAPAC|Luvu: geen vacaturepagina op de website
+- MEAPAC|MH Global: geen vacaturepagina op de website
+- MEAPAC|Mooments: alleen LinkedIn (niet uit te lezen zonder login)
+- MEAPAC|Multipass: geen vacaturepagina op de website
+- MEAPAC|MyBenefits: alleen LinkedIn (niet uit te lezen zonder login)
+- MEAPAC|Nector: alleen LinkedIn (niet uit te lezen zonder login)
+- MEAPAC|Nugttah: alleen LinkedIn (niet uit te lezen zonder login)
+- MEAPAC|Octopus Cards Limited: geen vacaturepagina op de website
+- MEAPAC|Paye Kart: geen vacaturepagina op de website
+- MEAPAC|Pixalink: geen vacaturepagina op de website
+- MEAPAC|Pointspot (Readyplanet): alleen LinkedIn (niet uit te lezen zonder login)
+- MEAPAC|PraisePal: geen vacaturepagina op de website
+- MEAPAC|Rabbit Rewards: alleen LinkedIn (niet uit te lezen zonder login)
+- MEAPAC|RewardPort: alleen LinkedIn (niet uit te lezen zonder login)
+- MEAPAC|Rewards Management ME (Air Miles): alleen LinkedIn (niet uit te lezen zonder login)
+- MEAPAC|Rewardz: alleen LinkedIn (niet uit te lezen zonder login)
+- MEAPAC|Rewardz (Singapore): alleen LinkedIn (niet uit te lezen zonder login)
+- MEAPAC|Smilie: geen vacaturepagina op de website
+- MEAPAC|Stamp Me: geen vacaturepagina op de website
+- MEAPAC|TCN – The Card Network: alleen LinkedIn (niet uit te lezen zonder login)
+- MEAPAC|Utop (FPT Group): geen vacaturepagina op de website
+- MEAPAC|Valuecard: alleen LinkedIn (niet uit te lezen zonder login)
+- MEAPAC|hediyemo (Mivento): geen vacaturepagina op de website
+- MEAPAC|iBonus Limited: geen vacaturepagina op de website
+- MEAPAC|the ENTERTAINER: alleen LinkedIn (niet uit te lezen zonder login)
+- MEAPAC|yuu Rewards: geen vacaturepagina op de website
+- USA|Active Junky: geen vacaturepagina op de website
+- USA|Alchemy3: geen vacaturepagina op de website
+- USA|Alliance Marketing, Inc.: geen vacaturepagina op de website
+- USA|Card Compliant, LLC: geen vacaturepagina op de website
+- USA|Carlisle Sales & Marketing: geen vacaturepagina op de website
+- USA|Certif-a-Gift Company: geen vacaturepagina op de website
+- USA|Charity Choice: geen vacaturepagina op de website
+- USA|Charity On Top Foundation: geen vacaturepagina op de website
+- USA|DPI, Inc.: geen vacaturepagina op de website
+- USA|EVT Incentive Marketing: geen vacaturepagina op de website
+- USA|EZ PIN INC: geen vacaturepagina op de website
+- USA|EnergyEarth: geen vacaturepagina op de website
+- USA|Engage Loyalty / Harco Incentives: geen vacaturepagina op de website
+- USA|GlobeTopper: geen vacaturepagina op de website
+- USA|GoHire, Inc.: geen vacaturepagina op de website
+- USA|HiThrive: geen vacaturepagina op de website
+- USA|IMA (Incentive Marketing Association): geen vacaturepagina op de website
+- USA|Incentive Meeting Services: geen vacaturepagina op de website
+- USA|Incentive Research Foundation: geen vacaturepagina op de website
+- USA|KleerWest, LLC: geen vacaturepagina op de website
+- USA|Laura Shanley Consulting: geen carrièrepagina bekend
+- USA|Optimum Card Solutions: geen vacaturepagina op de website
+- USA|PrePaidUSA: geen vacaturepagina op de website
+- USA|Pulse Experiential Travel: geen vacaturepagina op de website
+- USA|Q6 Enterprises, Inc: geen vacaturepagina op de website
+- USA|RK Incentives: geen vacaturepagina op de website
+- USA|Raise.com: geen vacaturepagina op de website
+- USA|Reloadly: verwijst naar LinkedIn
+- USA|RepLink / The DataDirect Group: geen vacaturepagina op de website
+- USA|Royal Performance Group: geen vacaturepagina op de website
+- USA|SKUx: geen vacaturepagina op de website
+- USA|Sales & Marketing Management: geen vacaturepagina op de website
+- USA|Seiko Watch of America, LLC: geen vacaturepagina op de website
+- USA|Sheryl O'Toole & Associates: geen vacaturepagina op de website
+- USA|Ticket Jones: geen vacaturepagina op de website
+- USA|Tzumi Electronics: geen vacaturepagina op de website
+- USA|V2 Incentives, LP: geen vacaturepagina op de website
+- USA|Vibe SMG, Inc.: geen vacaturepagina op de website
+- USA|Virtual Incentives: verwijst naar LinkedIn
+
+## Meldingen
+- O.C. Tanner | Contract Administrator: 429 Client Error: Too Many Requests for url: https://octanner.wd501.myworkdayjobs.com/wday/cxs/octanner/O_C_Tanner/job/USA---Utah-Salt-Lake-City-Headquarters/Co
