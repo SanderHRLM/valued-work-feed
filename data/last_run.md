@@ -1,47 +1,62 @@
-# Run 2026-11-23T13:07:11Z
+# Run 2026-11-23T15:57:34Z
 
-- Actieve vacatures in feed: **185**
-- Nieuw vandaag: **16**, gesloten vandaag: **15**
-- Bedrijven: 293 ok, 74 fout, 147 overgeslagen
-- Claude (claude-haiku-5-5): 433 aanroepen, 2256961 invoer- en 206596 uitvoertokens, circa $0.33 (plafond $5.00), 0 afgekapte pagina's, 0 weigeringen
+- Actieve vacatures in feed: **180**
+- Nieuw vandaag: **21**, gesloten vandaag: **25**
+- Bedrijven: 292 ok, 75 fout, 147 overgeslagen
+- Claude (claude-haiku-5-5): 284 aanroepen, 1356664 invoer- en 119447 uitvoertokens, circa $0.20 (plafond $5.00), 0 afgekapte pagina's, 0 weigeringen
 
 ## Nieuw
 - Velocity Frequent Flyer — [Business Development Executive](https://careers.virginaustralia.com/jobs/business-development-executive-brisbane-qld-australia-8148c9f3-81be-4d98-8bfa-1cdc12e60a43)
 - ValueNet HR & Digital — [Kundenberater (all genders) – Fokus Versicherungsberatung](https://valuenet-group.jobs.personio.de/job/2897869)
 - VR Benefícios — [Executivo Canais IV](https://vr.inhire.app/vagas/dbe9e049-cf0f-412c-baf6-4e797d472b1b/executivo-canais-iv-fortalezace)
-- Toka Internacional — [Ejecutivo de emisión e inventarios](https://mx.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-ejecutivo-de-emision-e-inventarios-en-zapopan-DC04C71C10CFB16D61373E686DCF3405)
 - Toka Internacional — [Analista de inventarios](https://mx.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-analista-de-inventarios-en-zapopan-CAB2F29248962DFA61373E686DCF3405)
+- Toka Internacional — [Ejecutivo de emisión e inventarios](https://mx.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-ejecutivo-de-emision-e-inventarios-en-zapopan-DC04C71C10CFB16D61373E686DCF3405)
 - Sprout Solutions — [Sales Consultant](https://www.careers-page.com/sprout-solutions-phil-inc/job/388RXW)
 - Retail Gift Card Association — [VP of Business Development - eCommerce Digital Solutions](https://jobs.dayforcehcm.com/en-US/corpay/CANDIDATEPORTAL/jobs/57199)
 - RecogNation — [Inside Sales Account Manager](https://recruitingbypaycor.com/career/JobIntroduction.action?clientId=8a7883d07beb3be7017bf4edce340354&id=8a78839ea1287e0201a1304db7282e45&source=&lang=en)
+- Puntos Colombia — [Ejecutivo Comercial Adquisicion Aliados](https://www.magneto365.com/co/empleos/ejecutivo-comercial-adquisicion-aliados-1279-1144117)
 - Perx Technologies — [Project Manager](https://www.perxtech.com/jobs/project-manager/)
 - One10 — [Account Director](https://one10llc.wd108.myworkdayjobs.com/ONE10/job/Minneapolis-Minnesota/Account-Director_R100195)
+- O.C. Tanner — [Buyer II – Materials & Indirect Spend](https://octanner.wd501.myworkdayjobs.com/O_C_Tanner/job/USA---Utah-Salt-Lake-City-Headquarters/Buyer-II---Materials---Indirect-Spend_JR26-271)
 - Monizze — [Sales Executive FR/NL](https://jobs.monizze.be/o/sales-executive-frnl)
+- Loyltworks — [Business Development Executive](https://loylt.works/careers)
 - LoyaltyXpert — [Customer Support Engineer](https://ecosmob.keka.com/careers/jobdetails/147758)
 - Giftogram — [AI Operations Manager](https://job-boards.greenhouse.io/giftogram/jobs/4387165009)
 - Giftaway Inc. — [Business Development Specialist](https://ph.linkedin.com/jobs/view/business-development-specialist-at-giftaway-4477102699?position=1&pageNum=0&refId=so%2Ba4nxbQ5%2Fia017UwVvrg%3D%3D&trackingId=o1M00YmLflHoYZjuA6hTug%3D%3D)
+- Giftaway Inc. — [Business Development Specialist](https://ph.linkedin.com/jobs/view/business-development-specialist-at-giftaway-4477102699?position=1&pageNum=0&refId=0eagPQpRzZ5iaRlKieqDOw%3D%3D&trackingId=6TwvAOXf9AtUAxhT9Ec%2Byw%3D%3D)
+- BONAGO Incentive Marketing Group — [Grafikdesigner Digital & Print mit KI-Kompetenz (all genders)](https://bonago-incentive.jobs.personio.de/job/2898877)
 - Alloyal — [Gerente de Marketing e Growth](https://alloyal.inhire.app/vagas/e07b9c20-cdf3-4c78-a62f-7151bb88ff22/gerente-de-marketing-e-growth)
 - Advantage Club — [Senior Customer Success Manager](https://www.advantageclub.ai/pages/ac_career/vacancy_details/17)
 
 ## Gesloten
+- Rankmi — Revenue Operations Manager
 - Bayzat — Corporate Sales Manager - Insurance
 - Bayzat — Service Account Manager
+- BONAGO Incentive Marketing Group — Grafikdesigner Digital & Print mit KI-Kompetenz (all genders)
 - Bonda by Cuponstar — Head of Sales (Cono Sur)
 - Bonda by Cuponstar — Senior Key Account Manager | AR
+- Caju — Customer Success Manager Sênior - Grandes Contas B2B
 - Caju — Pessoa Supervisora de Experiência do Cliente
 - Velocity Frequent Flyer — Business Development Lead
 - Giftogram — Enterprise Account Manager
 - Monizze — Head of Marketing Operations
 - Toka Internacional — Asesor fiscal B2B - Giro Fintech
 - Toka Internacional — Ejecutivo(a) comercial B2B (Especialista en Prospección y Soluciones Fiscales)
+- OffiNeeds — Business Development Manager (Inside Sales)
+- OffiNeeds — OBS Manager
 - One10 — Manager, Purchasing and Design
+- Giftaway Inc. — Business Development Specialist
 - Pluxee México — Team Lead Reembolsos Comercios
 - RecogNation — Program Account Manager
+- ValueNet HR & Digital — Kundenberater (all genders) – Fokus Versicherungsberatung
 - VR Benefícios — Executivo Canais IV
 - Wonderbox NL — Field Merchandiser Giftcards & Experiences
+- Loyalty Makers — Accountmanager New Business
+- Loyalty Makers — PROJECTMANAGER
+- Puntos Colombia — Analista de Experiencia
 
-## Fouten (74)
-- BENELUX-DE|Blackhawk Network Germany: ConnectTimeout: HTTPSConnectionPool(host='www.blackhawknetwork.de', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.blackhawknetwork.de', port=443) at 0x7e7d1419c
+## Fouten (75)
+- BENELUX-DE|Blackhawk Network Germany: ConnectTimeout: HTTPSConnectionPool(host='www.blackhawknetwork.de', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.blackhawknetwork.de', port=443) at 0x7a577bfea
 - BENELUX-DE|Blackhawk Network Netherlands: RuntimeError: geen vacaturelijst gevonden (blocked_or_empty)
 - BENELUX-DE|Joyn: RuntimeError: geen vacaturelijst gevonden (not_a_careers_page)
 - BENELUX-DE|Loyalty Prime: ConnectionError: HTTPSConnectionPool(host='www.loyaltyprime.com', port=443): Max retries exceeded with url: / (Caused by NewConnectionError("HTTPSConnection(host='www.loyaltyprime.com', port=443): Failed to establish 
@@ -49,6 +64,7 @@
 - BENELUX-DE|Officient: RuntimeError: geen vacaturelijst gevonden (not_a_careers_page)
 - BENELUX-DE|Talon.One: RuntimeError: geen vacaturelijst gevonden (links_elsewhere)
 - BENELUX-DE|VVV Cadeaukaarten: RuntimeError: geen vacaturelijst gevonden (blocked_or_empty)
+- BENELUX-DE|Wonderbox Belgium: HTTPError: 429 Client Error: Too Many Requests for url: https://wonderbox.wd3.myworkdayjobs.com/wday/cxs/wonderbox/WONDERBOX_GROUP_CAREERS/jobs
 - LATAM|Cliento: RuntimeError: pagina leeg of geblokkeerd
 - LATAM|Digital Rewards: RuntimeError: pagina leeg of geblokkeerd
 - LATAM|Lealto: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
@@ -63,7 +79,7 @@
 - MEAPAC|91APP: RuntimeError: geen vacaturelijst gevonden (blocked_or_empty)
 - MEAPAC|Ascenda: RuntimeError: geen vacaturelijst gevonden (blocked_or_empty)
 - MEAPAC|Biggloyalty: RuntimeError: geen vacaturelijst gevonden (not_a_careers_page)
-- MEAPAC|Blackhawk Network Australia: ConnectTimeout: HTTPSConnectionPool(host='blackhawknetwork.com.au', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='blackhawknetwork.com.au', port=443) at 0x7e7d14a9d
+- MEAPAC|Blackhawk Network Australia: ConnectTimeout: HTTPSConnectionPool(host='blackhawknetwork.com.au', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='blackhawknetwork.com.au', port=443) at 0x7a577b619
 - MEAPAC|Blackhawk Network Hong Kong: RuntimeError: geen vacaturelijst gevonden (blocked_or_empty)
 - MEAPAC|Capillary Arabia: RuntimeError: pagina leeg of geblokkeerd
 - MEAPAC|Capillary Technologies: RuntimeError: pagina leeg of geblokkeerd
@@ -81,8 +97,8 @@
 - MEAPAC|Onsurity: RuntimeError: geen vacaturelijst gevonden (not_a_careers_page)
 - MEAPAC|Ooredoo Nojoom: RuntimeError: geen vacaturelijst gevonden (not_a_careers_page)
 - MEAPAC|Pluxee India: HTTPError: 429 Client Error: Too Many Requests for url: https://pluxee.wd3.myworkdayjobs.com/wday/cxs/pluxee/Pluxee_Career_Site/jobs
-- MEAPAC|Pluxee Indonesia: RuntimeError: geen vacaturelijst gevonden (blocked_or_empty)
 - MEAPAC|Pluxee Türkiye: RuntimeError: geen vacaturelijst gevonden (not_a_careers_page)
+- MEAPAC|PrintStop India: RuntimeError: geen vacaturelijst gevonden (links_elsewhere)
 - MEAPAC|Razer Gold: HTTPError: 429 Client Error: Too Many Requests for url: https://razer.wd3.myworkdayjobs.com/wday/cxs/razer/Careers/jobs
 - MEAPAC|Smilie: RuntimeError: geen vacaturelijst gevonden (blocked_or_empty)
 - MEAPAC|UniPin: RuntimeError: geen vacaturelijst gevonden (blocked_or_empty)
@@ -92,17 +108,16 @@
 - MEAPAC|YOUGotaGift: RuntimeError: pagina leeg of geblokkeerd
 - MEAPAC|epay New Zealand (Prezzy Card): SSLError: HTTPSConnectionPool(host='epaynz.co.nz', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostna
 - USA|AAA: RuntimeError: geen vacaturelijst gevonden (not_a_careers_page)
-- USA|AMC Theatres: RuntimeError: geen vacaturelijst gevonden (blocked_or_empty)
 - USA|Alchemy3: SSLError: HTTPSConnectionPool(host='alchemy3.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certif
 - USA|American Airlines: RuntimeError: geen vacaturelijst gevonden (blocked_or_empty)
 - USA|Awardco: RuntimeError: geen vacaturelijst gevonden (blocked_or_empty)
 - USA|Best Buy: ReadTimeout: HTTPSConnectionPool(host='www.bestbuy.com', port=443): Read timed out. (read timeout=25)
 - USA|Blackhawk Network (BHN / BHN|Tango): RuntimeError: geen vacaturelijst gevonden (blocked_or_empty)
 - USA|C.A. Short Company: RuntimeError: geen vacaturelijst gevonden (not_a_careers_page)
-- USA|Dash Solutions: RuntimeError: geen vacaturelijst gevonden (not_a_careers_page)
+- USA|Charity Choice: ConnectTimeout: HTTPSConnectionPool(host='www.charitygiftcertificates.org', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.charitygiftcertificates.org', port=443
+- USA|Dash Solutions: RuntimeError: geen vacaturelijst gevonden (blocked_or_empty)
 - USA|Domino's Pizza: RuntimeError: geen vacaturelijst gevonden (blocked_or_empty)
 - USA|Extu: RuntimeError: geen vacaturelijst gevonden (blocked_or_empty)
-- USA|GThankYou: RuntimeError: pagina leeg of geblokkeerd
 - USA|Honeyfund: RuntimeError: geen vacaturelijst gevonden (blocked_or_empty)
 - USA|Incentive Concepts: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
 - USA|Interval International: RuntimeError: geen vacaturelijst gevonden (not_a_careers_page)
@@ -110,11 +125,12 @@
 - USA|PLI (PLI Cards): RuntimeError: geen vacaturelijst gevonden (not_a_careers_page)
 - USA|Picnic Time Family of Brands: RuntimeError: geen vacaturelijst gevonden (blocked_or_empty)
 - USA|PromoShop, Inc.: RuntimeError: pagina leeg of geblokkeerd
-- USA|Regal (Regal Cinemas): RuntimeError: geen vacaturelijst gevonden (blocked_or_empty)
 - USA|S&P Global: RuntimeError: geen vacaturelijst gevonden (blocked_or_empty)
 - USA|Shift4: RuntimeError: geen vacaturelijst gevonden (blocked_or_empty)
+- USA|Solo Stove: RuntimeError: geen vacaturelijst gevonden (blocked_or_empty)
 - USA|The Wolfe Companies (GiftYa): RuntimeError: geen vacaturelijst gevonden (blocked_or_empty)
 - USA|Totus: RuntimeError: geen vacaturelijst gevonden (not_a_careers_page)
+- USA|U.S. Bank: RuntimeError: geen vacaturelijst gevonden (blocked_or_empty)
 
 ## Overgeslagen (147)
 - BENELUX-DE|Air Miles / Loyalty Management Netherlands: alleen LinkedIn (niet uit te lezen zonder login)
@@ -231,13 +247,13 @@
 - USA|Card Compliant, LLC: geen vacaturepagina op de website
 - USA|Carlisle Sales & Marketing: geen vacaturepagina op de website
 - USA|Certif-a-Gift Company: geen vacaturepagina op de website
-- USA|Charity Choice: geen vacaturepagina op de website
 - USA|Charity On Top Foundation: geen vacaturepagina op de website
 - USA|DPI, Inc.: geen vacaturepagina op de website
 - USA|EVT Incentive Marketing: geen vacaturepagina op de website
 - USA|EZ PIN INC: geen vacaturepagina op de website
 - USA|EnergyEarth: geen vacaturepagina op de website
 - USA|Engage Loyalty / Harco Incentives: geen vacaturepagina op de website
+- USA|GThankYou: geen vacaturepagina op de website
 - USA|GlobeTopper: geen vacaturepagina op de website
 - USA|GoHire, Inc.: geen vacaturepagina op de website
 - USA|HiThrive: geen vacaturepagina op de website
@@ -266,4 +282,4 @@
 - USA|Virtual Incentives: verwijst naar LinkedIn
 
 ## Meldingen
-- Retail Gift Card Association | Director, Gift Card Program Management & Marketing: dubbel met Fanatics, niet opgenomen
+- ValueNet HR & Digital | Grafikdesigner Digital & Print mit KI-Kompetenz (all genders): dubbel met BONAGO Incentive Marketing Group, niet opgenomen
